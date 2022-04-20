@@ -1,0 +1,22 @@
+function myname(firstname,lastname)
+{
+  this.firstname=firstname;
+  this.lastname=lastname;
+}
+
+//var myfirst=new myname('Dolly','Soni');
+
+///console.log(myfirst.firstname);
+
+myname.prototype.greet=function()
+{
+    console.log("Hello, "+this.firstname+" "+this.lastname);
+
+}
+
+var myfirst=new myname('Dolly','Soni'); 
+myfirst.greet();
+
+var first=new myname('Vishal','Soni'); 
+first.greet();
+console.log(myfirst.__proto__);
